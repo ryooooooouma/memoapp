@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import CircleButton from '../elements/CircleButton';
 
 class MemoDetailScreen extends React.Component{
@@ -15,7 +15,8 @@ class MemoDetailScreen extends React.Component{
          今日は下記のセットをした。Youtubeの「腹筋二分」の動画をやってみた。
          </Text>
         </View>
-        <CircleButton name="pencil" color="white" style={styles.editButton} />
+        <CircleButton name="pencil" color="white" style={styles.editButton} onPress={() => { this.props.navigation.navigate('MemoEdit')}}>
+        </CircleButton>
       </View>
 
     )
